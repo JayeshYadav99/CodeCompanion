@@ -434,8 +434,9 @@ const handleSubmit = async (e,salt) => {
       alert(err)
   }
 }
-
-form.addEventListener('submit',  handleSubmit);
+if(form)
+{
+  form.addEventListener('submit',  handleSubmit);
 form.addEventListener('keyup', (e) => {
   if (e.keyCode === 13) {
     salt='Please rewrite the following code by adding meaningful comments to it';
@@ -445,6 +446,8 @@ form.addEventListener('keyup', (e) => {
       // handleSubmit(e,salt)
   }
 })
+}
+
 
     </script>
   </body>
