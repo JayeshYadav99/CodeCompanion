@@ -23,7 +23,7 @@ const timebtn = document.getElementById('time');
 if(timebtn)
 {
   time.addEventListener('click', function (e) {
-    salt = "find space and time  complexity";
+    salt = "What is the time and space complexity of the given code?explain each with proper explanation";
     
     handleSubmit(e, salt);
   });
