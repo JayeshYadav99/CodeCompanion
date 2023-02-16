@@ -85,7 +85,6 @@ function typeText(element, text) {
           clearInterval(interval)
       }
   }, 20)
-  
 }
 function generateUniqueId() {
   const timestamp = Date.now();
@@ -124,10 +123,10 @@ const handleSubmit = async (e,salt) => {
   // chatContainer.innerHTML += "space complexity";
 
   // to clear the textarea input 
-  form.reset()
+ // form.reset()
 
   // bot's chatstripe
-  // const uniqueId = generateUniqueId()
+  const uniqueId = generateUniqueId()
   //chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
   // to focus scroll to the bottom 
@@ -136,9 +135,8 @@ const handleSubmit = async (e,salt) => {
   // specific message div 
   //const messageDiv = document.getElementById(uniqueId)
 
-   op.innerHTML = "..."
+  op.innerHTML = " "
   loader(op)
- 
 
   const response = await fetch('https://code-companion.onrender.com', {
       method: 'POST',
@@ -152,7 +150,7 @@ const handleSubmit = async (e,salt) => {
   })
 
   clearInterval(loadinterval)
-   op.innerHTML=" ";
+  //messageDiv.innerHTML = " "
 
   function drawer(data)
   {
