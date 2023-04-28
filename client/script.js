@@ -168,8 +168,9 @@ const handleSubmit = async (e,salt) => {
      // chatContainer=parsedData;
       // ctx.font = "32px serif";
      // ctx.fillText(parsedData, 20, 50);
-    // op.innerHTML=parsedData;
-     typeText(op, parsedData)
+     op.innerHTML=parsedData;
+    //  typeText(op, parsedData);
+     salt=" ";
       // drawer(parsedData);
   } else {
       const err = await response.text()
